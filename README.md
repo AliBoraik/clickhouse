@@ -20,7 +20,7 @@ Before running the application, ensure that you have the following dependencies 
 ```docker
 docker-compose up
 ```
-3.  URL http://localhost:5105 to access the application.
+3.  URL http://localhost:5105/swagger/index.html to access swagger .
 
 
 ### API Endpoints
