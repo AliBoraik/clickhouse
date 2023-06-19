@@ -7,7 +7,7 @@ namespace ClickHouseDemo.Services;
 
 public class ClickHouseService : IClickHouseService
 {
-    private const string ConnectionString = "Host=localhost;Protocol=http;Port=8123";
+    private const string ConnectionString = "Host=clickhouse;Protocol=http;Port=8123";
     private readonly ClickHouseConnection _clickHouseConnection =  new(ConnectionString);
 
     public async Task AddUserTable()

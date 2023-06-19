@@ -1,0 +1,14 @@
+version: "3"
+services:
+    server:
+      container_name: server
+      build:      
+        dockerfile: Dockerfile      
+      ports:
+        - '5105:80'
+    clickhouse:
+      container_name: clickhouse
+      image: clickhouse/clickhouse-server
+      ports:
+        - "8123:8123"
+        - "9000:9000"        

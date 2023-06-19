@@ -1,4 +1,3 @@
-using ClickHouseDemo;
 using ClickHouseDemo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,13 +12,10 @@ builder.Services.AddSingleton<IClickHouseService, ClickHouseService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger(); 
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
