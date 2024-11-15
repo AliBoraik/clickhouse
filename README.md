@@ -10,8 +10,7 @@ This is a .NET application that integrates with ClickHouse, an open-source colum
 
 Before running the application, ensure that you have the following dependencies installed:
 
-- .NET SDK [link to installation guide]
-- ClickHouse [link to ClickHouse installation guide]
+- Dcoker 
 
 ### Installation
 
