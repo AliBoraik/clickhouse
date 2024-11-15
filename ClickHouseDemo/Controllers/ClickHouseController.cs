@@ -30,7 +30,7 @@ public class ClickHouseController : ControllerBase
         catch (Exception e)
         {
             _logger.LogError("LogError {0} with message : {Message}", Request.Path,e.Message);
-            return BadRequest(e.Message);
+           return StatusCode(StatusCodes.Status500InternalServerError ,  "Internal server error. Please retry later.");
         }
     }
     
@@ -45,7 +45,7 @@ public class ClickHouseController : ControllerBase
         catch (Exception e)
         {
             _logger.LogError("LogError {0} with message : {Message}", Request.Path,e.Message);
-            return BadRequest(e.Message);
+           return StatusCode(StatusCodes.Status500InternalServerError ,  "Internal server error. Please retry later.");
         }
     }
     
@@ -62,8 +62,8 @@ public class ClickHouseController : ControllerBase
         }
         catch (Exception e)
         {
-            _logger.LogError("LogError {0} with message : {Message}", Request.Path,e.Message);
-            return BadRequest(e.Message);
+            _logger.LogError("LogError {0} with message : {Message}", Request.Path,e.Message);             
+           return StatusCode(StatusCodes.Status500InternalServerError ,  "Internal server error. Please retry later.");
         }
     }
     
@@ -78,7 +78,7 @@ public class ClickHouseController : ControllerBase
         catch (Exception e)
         {
             _logger.LogError("LogError {0} with message : {Message}", Request.Path,e.Message);
-            return NotFound(e.Message);
+            return StatusCode(StatusCodes.Status500InternalServerError ,  "Internal server error. Please retry later.");
         }
     }
 
@@ -93,7 +93,7 @@ public class ClickHouseController : ControllerBase
         catch (Exception e)
         {
             _logger.LogError("LogError {0} with message : {Message}", Request.Path,e.Message);
-            return BadRequest(e.Message);
+            return StatusCode(StatusCodes.Status500InternalServerError ,  "Internal server error. Please retry later.");
         }
     }
     
@@ -108,7 +108,7 @@ public class ClickHouseController : ControllerBase
         catch (Exception e)
         {
             _logger.LogError("LogError {0} with message : {Message}", Request.Path,e.Message);
-            return NotFound(e.Message);
+            return StatusCode(StatusCodes.Status500InternalServerError ,  "Internal server error. Please retry later.");
         }
     }
 }
